@@ -1,0 +1,8 @@
+@use '../../../../assets/styles/variables' as v;
+
+hr {
+    background: v.$darkBlue;
+    border: none;
+    height: .2rem;
+    margin: 2rem 0 2rem 0;
+}

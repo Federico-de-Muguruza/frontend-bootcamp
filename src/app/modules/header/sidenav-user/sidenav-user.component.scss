@@ -1,0 +1,10 @@
+@use '../../../../assets/styles/variables' as v;
+
+a {
+    color: v.$whiteSmoke;
+    font-size: v.$bigFontSize;
+}
+
+.active-link {
+    color: v.$lightRed;
+}

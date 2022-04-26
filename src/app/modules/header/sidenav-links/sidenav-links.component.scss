@@ -1,0 +1,46 @@
+@use '../../../../assets/styles/variables' as v;
+@use '../../../../assets/styles/display' as d;
+
+.active-link {
+    color: v.$lightRed!important;
+}
+
+:host {
+    height: 100%;
+
+    nav {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            font-size: v.$bigFontSize;
+            @include d.column-align-center;
+            justify-content: space-around;
+
+            li {
+                a {
+                    color: v.$whiteSmoke;
+
+                    &:hover {
+                        color: v.$lightRed;
+                    }
+
+                    &::after {
+                        margin-top: 1rem;
+                        content: '';
+                        display: flex;
+                        width: 0;
+                        height: 5px;
+                        background-color: v.$lightRed;
+                        transition: width .3s;
+                    } 
+
+                    &:hover::after {
+                        width: 100%;
+                        transition: width .3;
+                    }
+                }
+            }
+        }
+    }
+}

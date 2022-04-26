@@ -1,0 +1,14 @@
+<form action="" [formGroup]="myForm" (ngSubmit)="tokenCheck()">
+    <mat-form-field appearance="legacy">
+        <mat-label>Ingresa un nombre</mat-label>
+        <input matInput placeholder="Lavar los platos" formControlName="name" autocomplete="off">
+    </mat-form-field>
+    <p *ngIf="myForm.get('name').hasError('required') && myForm.get('name').dirty">Debes ingresar un nombre</p>
+    <mat-form-field appearance="legacy">
+        <mat-label>Ingresa una descripción (opcional)</mat-label>
+        <input matInput placeholder="Lavarlos para tenerlos limpios y ordenados" formControlName="description" autocomplete="off">
+    </mat-form-field>
+    <p *ngIf="myForm.get('description').hasError('minlength')">La descripción debe tener un mínimo de 10 caracteres</p>
+    <button [disabled]="loading" mat-raised-button color="primary" type="submit" [disabled]=" ! myForm.valid">Agregar</button>
+    <app-loading *ngIf="loading"></app-loading>
+</form>

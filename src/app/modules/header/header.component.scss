@@ -1,0 +1,14 @@
+@use '../../../assets/styles/variables' as v;
+@use '../../../assets/styles/display' as d;
+
+:host {
+    header {
+        position: sticky;
+        top: 0;
+        width: 100vw;
+        height: 10vh;
+        background-color: v.$darkBlue;
+        @include d.align-center;
+        z-index: 1;
+    }
+}

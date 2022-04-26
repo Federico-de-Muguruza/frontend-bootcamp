@@ -1,0 +1,31 @@
+@use '../../../../assets/styles/display' as d;
+@use '../../../../assets/styles/variables' as v;
+
+:host {
+    width: 90%;
+}
+
+form {
+    padding: 1rem;
+    border: 1px solid v.$darkBlue;
+    margin: 10rem auto;
+    @include d.column-align-center;
+
+    mat-form-field {
+        width: 90%;
+
+        mat-icon {
+            transform: scale(1.5);
+        }
+    }
+
+    p {
+        font-weight: v.$bold;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    :host {
+        width: 30%;
+    }
+}

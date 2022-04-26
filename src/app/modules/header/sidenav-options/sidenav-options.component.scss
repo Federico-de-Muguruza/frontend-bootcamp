@@ -1,0 +1,15 @@
+@use '../../../../assets/styles/display' as d;
+
+:host {
+    aside {
+        height: 99%;
+        @include d.column-align-center;
+        justify-content: space-between;
+
+        section {
+            height: 70%;
+            width: 100%;
+            @include d.column-align-center;
+        }
+    }
+}

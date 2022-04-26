@@ -1,0 +1,45 @@
+@use '../assets/styles/variables' as v;
+@use '../assets/styles/display' as d;
+
+.card {
+	margin: min(5%, 5em);
+	max-width: 500px;
+}
+
+mat-sidenav-container {
+	height: 100vh;
+
+	mat-sidenav {
+		background-color: v.$darkBlue;
+		@include d.column-centered;
+	}
+}
+
+section {
+	@include d.align-center;
+	height: 100%;
+	width: 100%;
+	color: v.$whiteSmoke;
+
+	h1 {
+		font-size: 2rem;
+		margin: 0 0 0 2.5rem;
+	}
+
+	mat-icon {
+		margin-left: 3rem;
+		transform: scale(3);
+		cursor: pointer;
+	}
+}
+
+a {
+	margin-right: 1rem;
+	font-size: 2rem;
+	color: v.$whiteSmoke;
+	cursor: pointer;
+}
+
+main {
+	@include d.column-centered;
+}

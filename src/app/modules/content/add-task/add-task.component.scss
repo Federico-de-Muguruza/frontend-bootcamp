@@ -1,0 +1,12 @@
+@use '../../../../assets/styles/display' as d;
+@use '../../../../assets/styles/variables' as v;
+ 
+form {
+    inline-size: 180px;
+    overflow-wrap: break-word;
+    @include d.column-align-center;
+
+    p {
+        font-weight: v.$bold;
+    }
+}

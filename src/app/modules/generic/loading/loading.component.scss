@@ -1,0 +1,13 @@
+@use '../../../../assets/styles/display' as d;
+@use '../../../../assets/styles/variables' as v;
+
+section {
+    margin-top: 5rem;
+    @include d.column-align-center;
+    justify-content: space-around;
+
+    p {
+        margin: 1rem;
+        font-size: v.$mediumFontSize;
+    }
+}

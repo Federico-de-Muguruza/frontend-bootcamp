@@ -1,0 +1,10 @@
+@use '../../../../assets/styles/display' as d;
+
+header {
+    margin-top: 2rem;
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+}

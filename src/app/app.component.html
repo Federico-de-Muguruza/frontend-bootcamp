@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <app-sidenav-options></app-sidenav-options>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header>
+            <section>
+                <mat-icon (click)="sidenav.toggle()" *ngIf="icon === 'menu'">menu</mat-icon>
+                <mat-icon (click)="back()" *ngIf="icon === 'keyboard_arrow_left'">keyboard_arrow_left</mat-icon>
+                <h1>{{title}}</h1>
+            </section>
+            <a *ngIf="user" (click)="exit()">Salir</a>
+        </app-header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

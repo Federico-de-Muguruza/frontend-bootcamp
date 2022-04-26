@@ -1,0 +1,7 @@
+<app-card *ngFor="let p of projects" [item]="p" [members]="p.members" routerLink="/my-projects/{{p.id}}">
+    <p>{{p.icon}}</p>
+</app-card>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<app-error *ngIf=" ! projects && ! loading">No tienes proyectos asignados</app-error>

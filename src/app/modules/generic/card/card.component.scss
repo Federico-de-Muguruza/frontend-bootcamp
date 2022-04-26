@@ -1,0 +1,30 @@
+::ng-deep .mat-card-header-text {
+  margin: 0px!important;
+}
+
+.example-card {
+  min-width: 80vw;
+}
+
+mat-card {
+  cursor: pointer;
+
+  mat-card-header {
+    justify-content: space-between;
+  }
+}
+
+mat-card-subtitle {
+  margin: 0 0 1rem 0;
+}
+
+section {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 850px) {
+  .example-card {
+    max-width: 400px;
+    min-width: 40vw;
+  }
+}
